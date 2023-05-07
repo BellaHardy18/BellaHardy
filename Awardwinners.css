@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    position: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+}
+.header{
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+    
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #b10b0b;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.campus{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.campus-col{
+    flex-basis: 20%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.righttext{
+    flex-basis: 20%;
+    position: relative;
+    color: #fff;
+}
+h1{
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+}
+h4{
+    color: #fff;
+    font-size: 30px;
+    text-align: right;
+}
+h5{
+    color: #fff;
+    font-size: 15px;
+    text-align: right;
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color:white;
+    font-size: 26px;
+    bottom: 0;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.flex {
+    width: 100vw;
+    height: 100vh;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+  }
+
+  h2{
+    color: white;
+    font-size: 30px;
+    text-align: left;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    
+
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+    flex-basis: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .col {
+    flex: 1;
+    margin: 0px;
+    text-align: right;
+    position: relative;
+    align-items: center;
+    
+    
+  }
+  
+  .col img {
+    max-width: 50%;
+    height: auto;
+    flex-basis: 20%;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    width: 100%;
+    display: block;
+    scale: 100%;
+    justify-content: center;
+    padding-left: 200px;
+
+  }
+  
+  .col p {
+    text-align: left;
+    color: white;
+    
+  }

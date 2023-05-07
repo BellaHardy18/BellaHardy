@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel = "stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="parallax">
+    <section class = "header">
+        <nav>
+            <a href = "index.html"> <img src = "Photos/B.png"></a>
+            <div class ="nav-links" id = "navLinks">
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li> <a href="">HOME</a></li>
+                        <li> <a href="./projects.html">PROJECTS</a></li>
+                        <li> <a href="./Rates.html">RATES</a></li>
+                        <li> <a href="./Photos.html">PHOTOS</a></li>
+                        <!-- <li> <a href="./Contact.html">ABOUT ME</a></li> -->
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick = "showMenu()"></i>
+        </nav>
+
+            <div class = "text-box">
+                <h1>BELLA HARDY</h1>
+                <a href="./Contact.html" class="hero-btn" >CONTACT</a>
+            </div>
+        
+
+    </section>
+</div>
+<!-----------Course------------
+<section class = "Rates">
+    <h1>RATES</h1>
+    <p>These are the rates that I offer</p>
+    <div class ="row">
+        <div class = "rates-col">
+            <h3>$220</h3>
+            <p>One location<br>Two outfits<br>One Hour</p>
+        </div>
+        <div class = "rates-col">
+            <h3>$350</h3>
+            <p>Two locations<br>Three outfits<br>Two hours</p>
+        </div>
+        <div class = "rates-col">
+            <h3>$500</h3>
+            <p>Three locations<br>Four outfits<br>Three hours</p>
+        </div>
+    </div>
+</section>
+-->
+
+<!----------------Campus-------------------------->
+<!-- <section class = "campus">
+    <h1>SENIORS</h1>
+    <div class="row">
+        <div class="campus-col">
+            <img src="Photos/StudentID photo.jpg">
+            <div class="layer">
+                <h3>Bella Hardy</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="Photos/Colton.jpg">
+            <div class="layer">
+                <h3>URBAN</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="Photos/Prachi.jpg">
+            <div class="layer">
+                <h3>RUSTIC</h3>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="Photos/editedforweb.png" alt="Your image description here">
+      </div>
+      <div class="col">
+                <section class="parallax-section" id = "con">
+                        <h2>BELLA HARDY</h2>
+                </section>
+
+                <h5>UC San Diego</h5>
+                <p>MAJOR: Cognitve Science with Specialization in Design and Interaction</p>
+                <p>MINOR: Computer Science Engineering</p>
+                <p></p>
+
+                <p>TEL: (425)923-6445</p>
+                <p>EMAIL: IHardy@UCSD.edu</p>
+                <a href="https://docs.google.com/document/d/16TlkXMVH-Sd1jI8xquid2OMkH68jJ6r7VV8dcm3XFXE/edit?usp=sharing" target="_blank" class="resumebutton" >RESUME</a>
+                <div class = "icons">
+                    <a href="https://www.instagram.com/bella_hardy18/?hl=en" target="_blank"><img src="Photos/ig.png"></a>
+                    <a href="https://www.linkedin.com/in/isabella-hardy18/" target="_blank" ><img src="Photos/in.png"></a>
+                    <a href="https://github.com/BellaHardy18" target="_blank"><img src="Photos/git.png"></a>
+                </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!-----------JavaScript for Toggle Menu----------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+    $('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+ 
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); 
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
+</script>
+
+
+</body>
+
+
+</html>

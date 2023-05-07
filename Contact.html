@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name = "viewport" content = "with=device-width, inital scale = 1.0">
+    <title>Bella Hardy</title>
+    <link rel = "stylesheet" href="Contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<section class = "header">
+    <nav>
+        <a href = "index.html"> <img src = "Photos/B.png"></a>
+        <div class ="nav-links" id = "navLinks">
+            <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                <ul>
+                    <li> <a href="index.html">HOME</a></li>
+                    <li> <a href="https://github.com/BellaHardy18">CODE</a></li>
+                    <li> <a href="./Rates.html">RATES</a></li>
+                    <li> <a href="./Photos.html">PHOTOS</a></li>
+                    <!-- <li> <a href="./Contact.html">CONTACT</a></li> -->
+                </ul>
+        </div>
+        <i class="fa fa-bars" onclick = "showMenu()"></i>
+    </nav>
+</section>
+
+<div class= "col">
+    <h1>CONTACT</h1>
+    <div class = "row">
+        <img class = "photoB" src="Photos/Me.jpg">
+        <div class="ContactSurvey">
+            <form action="action_page.php">
+        
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+    
+            <label for="lEmail">Email</label>
+            <input type="text" id="lEmail" name="emal" placeholder="Your email...">
+        
+        
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+        
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <section class = "PhotoBella">
+    
+    <div class="lol">
+        <div class="campus-col">
+            <img src="Photos/Me.jpg">
+            <div class="layer">
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+
+<!-- <section class = "ContactSurvey">
+    <div class="ContactSurvey">
+        <form action="action_page.php">
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+        <label for="lEmail">Email</label>
+        <input type="text" id="lEmail" name="emal" placeholder="Your email...">
+    
+    
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+    
+        </form>
+    </div>
+</section> -->
+
+<!-------------JAVA SCRIPT--------------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
