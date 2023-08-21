@@ -1,41 +1,46 @@
-*{
+* {
     margin: 0;
-    position: 0;
+    padding: 0; /* Corrected from position: 0 */
     font-family: 'Raleway', sans-serif;
     background-color: black;
 }
-.header{
+
+.header {
     width: 100%;
     background-position: center;
     position: relative;
 }
-nav{
+
+nav {
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
 }
-nav img{
+
+nav img {
     width: 150px;
 }
-.nav-links{
+
+.nav-links {
     flex: 1;
     text-align: right;
 }
-.nav-links ul li{
+
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 13px;
-
 }
-.nav-links ul li::after{
+
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -44,16 +49,19 @@ nav img{
     margin: auto;
     transition: 0.5s;
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li:hover::after {
     width: 100%;
 }
-.campus{
+
+.campus {
     width: 100%;
     margin: auto;
     text-align: center;
-    padding: 50px;
+    padding-bottom: 50px;
 }
-.campus-col{
+
+.campus-col {
     flex-basis: 20%;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -61,31 +69,20 @@ nav img{
     overflow: hidden;
     color: #fff;
 }
-.campus-col img{
+
+.campus-col img {
     width: 100%;
     display: block;
     border-radius: 20px;
 }
 
-
-
-h1{
+h1 {
     color: #fff;
     font-size: 100px;
     align-self: center;
 }
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color:white;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-}
 
-.layer{
+.layer {
     border-radius: 0;
 }
 
@@ -95,85 +92,60 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
     align-items: center top;
     position: absolute;
-  }
+}
 
+.grid-item:hover {
+    box-shadow: 5px 5px 20px white;
+}
 
-#gallery {
-    line-height:0;
-    -webkit-column-count:5; /* split it into 5 columns */
-    -webkit-column-gap:5px; /* give it a 5px gap between columns */
-    -moz-column-count:5;
-    -moz-column-gap:5px;
-    row-gap:30px;
-    column-count:4;
-    column-gap:30px;
-
- }
-
- #gallery img {
-    width: 100% !important;
-    height: auto !important;
-    margin-bottom: 30px; /* to match column gap */
- }
-
- @media (max-width: 1200px) {
-    #gallery {
-     -moz-column-count:    4;
-     -webkit-column-count: 4;
-     column-count:         4;
-    }
- }
-
- @media (max-width: 1000px) {
-    #gallery {
-     -moz-column-count:    3;
-     -webkit-column-count: 3;
-     column-count:         3;
-    }
- }
-
- @media (max-width: 800px) {
-    #gallery {
-     -moz-column-count:    2;
-     -webkit-column-count: 2;
-     column-count:         2;
-    }
- }
-
- @media (max-width: 400px) {
-    #gallery {
-     -moz-column-count:    1;
-     -webkit-column-count: 1;
-     column-count:         1;
-    }
- }
-
- 
-
- .projects-grid {
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 350px); 
-    grid-template-rows: repeat(2, 350px); 
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 350px);
     gap: 20px;
     justify-content: center;
-  }
-  
-  .grid-item {
-    border: 1px solid black;
-    overflow: hidden; /* Hide any overflowing content */
-    justify-content: center;
- 
-  }
-  
-  .grid-item img {
-    width: 100%; /* Set the width of the image to 100% of its container */
-    height: 100%; /* Set the height of the image to 100% of its container */
-    object-fit: cover; /* Scale the image to cover the entire container */
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
     border-radius: 20px;
-    justify-content: center;
-  }
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-description {
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    font-size: 25px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+}
+
+.grid-item:hover .project-description {
+    opacity: 1;
+    pointer-events: auto;
+}
